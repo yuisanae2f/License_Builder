@@ -37,6 +37,12 @@ export function Main(OptTemplateValue, Year, Owner, Object) {
         document.getElementById("Object").value = Object;
         document.getElementById("Object").addEventListener("change", OnChangeGlobal);
     }
+    if(document.getElementById("Submit")) {
+        document.getElementById("Submit").addEventListener("click", () => {
+            location.href = window.location.href.split('?')[0] 
+            + `?prm_template=${OptTemplateValue}&prm_year=${Year}&prm_owner=${Owner}&prm_obj=${Object}&prm_hideIStream=1`;
+        });
+    }
 
     
 

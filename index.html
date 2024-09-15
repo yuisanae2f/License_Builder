@@ -9,7 +9,6 @@
     <div id="istream">
         <fieldset>
             <legend><h1>Parameter</h1></legend>
-
             <label for="options">Choose the license template</label>
             <select id="options" name="options" onchange="OnChangeGlobal()">
                 <option value="Apache License 2.0">Apache License 2.0</option>
@@ -24,6 +23,8 @@
             <p>Object(Your work)</p>
             <input type="text" id="Object">
         </fieldset>
+
+        <input type="button" value="Submit" id="Submit">
 
         <fieldset>
             <legend><h1>URL</h1></legend>
@@ -42,7 +43,7 @@
     </fieldset>
 
     <fieldset>
-        <legend><h1>Content</h1></legend>
+        <legend><h1>License</h1></legend>
         <pre id="license"></pre>
     </fieldset>
 </body>

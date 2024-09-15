@@ -13,6 +13,7 @@
             <label for="options">Choose the license template</label>
             <select id="options" name="options" onchange="OnChangeGlobal()">
                 <option value="Apache License 2.0">Apache License 2.0</option>
+                <option value="GNU General Public License v3.0">GNU General Public License v3.0</option>
                 <option value="None">None</option>
             </select><br><br>
 
@@ -22,6 +23,11 @@
             <input type="text" id="Owner">   
             <p>Object(Your work)</p>
             <input type="text" id="Object">
+        </fieldset>
+
+        <fieldset>
+            <legend><h1>URL</h1></legend>
+            <div id="_url"></div>
         </fieldset>
     </div>
 
@@ -38,12 +44,6 @@
     <fieldset>
         <legend><h1>Content</h1></legend>
         <pre id="license"></pre>
-    </fieldset>
-
-
-    <fieldset>
-        <legend><h1>URL</h1></legend>
-        <div id="_url"></div>
     </fieldset>
 </body>
 <script type="module">

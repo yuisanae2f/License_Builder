@@ -1,5 +1,6 @@
 
 import { cApacheLicenseV2_0 } from "./License/Apache_License_v2_0.js";
+import { cGNU_General_Public_License_v3_0 } from "./License/GNU_General_Public_License_v3_0.js";
 import { iLicenseBuilder } from "./LicenseBuilder.js";
 import { cState_NO_IMP_FOUND } from "./State.js";
 
@@ -44,6 +45,11 @@ export function Main(OptTemplateValue, Year, Owner, Object) {
         case "Apache License 2.0":
             license = new cApacheLicenseV2_0(Year, Owner, Object);
             break;
+
+        case "GNU General Public License v3.0":
+            license = new cGNU_General_Public_License_v3_0(Year, Owner, Object);
+            break;
+            
         default:
             console.log("On main code(%d): %s", cState_NO_IMP_FOUND.id, cState_NO_IMP_FOUND.desc);
             return;
@@ -71,6 +77,9 @@ export function Main(OptTemplateValue, Year, Owner, Object) {
     const console_license_rtn = license.LICENSE(console_license);
     console.log("On LICENSE code(%d): %s", console_license_rtn.id, console_license_rtn.desc);
 
-    document.getElementById("_url").innerHTML = window.location.href.split('?')[0] 
-    + `?prm_template=${OptTemplateValue}&prm_year=${Year}&prm_owner=${Owner}&prm_obj=${Object}&prm_hideIStream=1`;
+    if(document.getElementById("_url"))
+        document.getElementById("_url").innerHTML = window.location.href.split('?')[0] 
+        + `?prm_template=${OptTemplateValue}&prm_year=${Year}&prm_owner=${Owner}&prm_obj=${Object}&prm_hideIStream=1`;
+
+
 }

@@ -1,6 +1,7 @@
 
 import { cApacheLicenseV2_0 } from "./License/Apache_License_v2_0.js";
 import { cGNU_General_Public_License_v3_0 } from "./License/GNU_General_Public_License_v3_0.js";
+import { cGPL2 } from "./License/GPLv2.js";
 import { iLicenseBuilder } from "./LicenseBuilder.js";
 import { cState_NO_IMP_FOUND } from "./State.js";
 
@@ -55,7 +56,11 @@ export function Main(OptTemplateValue, Year, Owner, Object) {
         case "GNU General Public License v3.0":
             license = new cGNU_General_Public_License_v3_0(Year, Owner, Object);
             break;
-            
+
+        case "GNU General Public License v2.0 (GPL2)":
+            license = new cGPL2(Year, Owner, Object);
+            break;
+
         default:
             console.log("On main code(%d): %s", cState_NO_IMP_FOUND.id, cState_NO_IMP_FOUND.desc);
             return;

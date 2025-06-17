@@ -1,5 +1,5 @@
 import { iLicenseBuilder } from "../LicenseBuilder.js";
-import { cState, cState_ALL_GOOD } from "../State.js";
+import { cState, cState_ALL_GOOD, cState_REF_NULL } from "../State.js";
 import { cPermission, cPermission_COMMERCIAL_USE, cPermission_DISTRIBUTION, cPermission_MODIFICATION, cPermission_PATENT_USE, cPermission_PRIVATE_USE } from "../Permission.js"; 
 import { cCondition_LICENSE_AND_COPYRIGHT_NOTICE, cCondition_STATE_CHANGES } from "../Condition.js";
 import { cLimit_LIABILITY, cLimit_TRADEMART_USE, cLimit_WARRANTY } from "../Limit.js";
@@ -21,7 +21,7 @@ export class cApacheLicenseV2_0 extends iLicenseBuilder {
      */
     LICENSE(Console) {
         if(Console == undefined || Console == null)
-            return cState_REF_NULL
+            return cState_REF_NULL;
 
         Console.innerHTML 
         = `                                 Apache License

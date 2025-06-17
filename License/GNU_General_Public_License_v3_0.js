@@ -2,7 +2,7 @@ import { cCondition_DISCLOSE_SOURCE, cCondition_LICENSE_AND_COPYRIGHT_NOTICE, cC
 import { iLicenseBuilder } from "../LicenseBuilder.js";
 import { cLimit_LIABILITY, cLimit_WARRANTY } from "../Limit.js";
 import { cPermission_COMMERCIAL_USE, cPermission_DISTRIBUTION, cPermission_MODIFICATION, cPermission_PATENT_USE, cPermission_PRIVATE_USE } from "../Permission.js";
-import { cState_REF_NULL } from "../State.js";
+import { cState_ALL_GOOD, cState_REF_NULL } from "../State.js";
 
 export class cGNU_General_Public_License_v3_0 extends iLicenseBuilder {
     /**
@@ -739,5 +739,7 @@ the library.  If this is what you want to do, use the GNU Lesser General
 Public License instead of this License.  But first, please read
 &lt;https://www.gnu.org/licenses/why-not-lgpl.html&gt;.
 `
+
+        return cState_ALL_GOOD;
      }
 }
